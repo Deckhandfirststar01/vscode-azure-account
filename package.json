@@ -110,7 +110,9 @@
     "compile": "tsc -p ./",
     "which": "which tsc",
     "watch": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install"
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "@types/copy-paste": "1.1.30",
@@ -137,6 +139,8 @@
     "semver": "5.4.1",
     "vscode-extension-telemetry": "0.0.8",
     "vscode-nls": "2.0.2",
-    "ws": "3.1.0"
-  }
+    "ws": "3.1.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
